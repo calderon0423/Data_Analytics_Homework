@@ -1,0 +1,101 @@
+.navbar-brand {
+  height: 60px;
+  padding: 10px;
+  background-color:  rgb(69, 197, 180);
+  text-align: center;
+  /*Text*/
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 7%;
+  height: auto;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    padding-right: 20px;
+}
+
+.navbar-collapse {
+    padding-left: 60%;
+}
+
+.navbar {
+    background-color: white;
+    width: 100%;
+}
+
+body {
+    background-color: #ededed;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(69, 197, 180);
+}
+
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(69, 197, 180);
+}
+
+.text-center {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(69, 197, 180);
+    text-align: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+#description-image {
+    width: 50%;
+}
+
+#active {
+    border-color: turquoise;
+    border-style: solid;
+    width: 100%;
+    align-items: center;
+}
+
+
+.mini {
+    width: 100%; 
+    align-items: center;
+}
+
+.description-content {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.wrap-left {
+    float: left;
+}
+
+footer {
+    background-color: turquoise; 
+    border-top-style: solid; 
+    border-top-width: 5px; 
+    border-top-color: rgb(69, 197, 180);
+    color: white; 
+    font-family: 'Calibri';
+    font-size: 15px; 
+    text-align: center; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px; 
+    }
