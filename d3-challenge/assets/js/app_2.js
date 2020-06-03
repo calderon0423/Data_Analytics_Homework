@@ -1,5 +1,5 @@
 var svgWidth = 960;
-var svgHeight = 500; 
+var svgHeight = 600; 
 
 var margin = {
     top: 20, 
@@ -170,23 +170,24 @@ d3.csv('data.csv').then(function(health_data, err) {
         .classed('y-axis', true)
         .call(leftAxis);
 
-    var circlesGroup = chartGroup.selectAll('circle')
+    var circlesGroup = chartGroup.selectAll('.stateCircle')
         .data(health_data)
         .enter()
         .append('circle')
-        .attr('cx', d => xLinearScale(d[chosenXAxis])+5)
-        .attr('cy', d => yLinearScale(d[chosenYAxis])-5)
-        .attr('r', 15)
-        .attr('fill', 'blue')
-        .attr('opacity', '0.5');
+        .attr('class', 'stateCircle')
+        .attr('cx', d => xLinearScale(d[chosenXAxis]))
+        .attr('cy', d => yLinearScale(d[chosenYAxis]))
+        .attr('r', 20)
+        // .attr('fill', 'blue')
+        // .attr('opacity', '0.5');
 
-    var textLabels = chartGroup.selectAll('.text-label')
+    var textLabels = chartGroup.selectAll('.stateText')
         .data(health_data)
         .enter()
         .append('text')
-        .attr('class', 'text-label')
-        .attr('dx', d => xLinearScale(d[chosenXAxis]))
-        .attr('dy', d => yLinearScale(d[chosenYAxis]))
+        .attr('class', 'stateText')
+        .attr('dx', d => xLinearScale(d[chosenXAxis])-1)
+        .attr('dy', d => yLinearScale(d[chosenYAxis])+5)
         .text(d=>d.abbr)
 
     var xlabelsGroup = chartGroup.append('g')
