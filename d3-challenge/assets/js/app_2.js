@@ -82,6 +82,23 @@ function renderYCircles(circlesGroup, newYscale, chosenYAxis) {
     return circlesGroup;
 }
 
+function renderYTextLabels(textLabels, newYScale, chosenYAxis) {
+
+    textLabels.transition()
+        .duration(1000)
+        .attr('dy', d => newYScale(d[chosenYAxis]));
+    
+    return textLabels;
+}
+
+function renderXTextLabels(textLabels, newXScale, chosenXAxis) {
+
+    textLabels.transition()
+        .duration(1000)
+        .attr('dx', d => newXScale(d[chosenXAxis]));
+    
+    return textLabels;
+}
 
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     
@@ -154,15 +171,23 @@ d3.csv('data.csv').then(function(health_data, err) {
         .call(leftAxis);
 
     var circlesGroup = chartGroup.selectAll('circle')
-    .data(health_data)
-    .enter()
-    .append('circle')
-    .attr('cx', d => xLinearScale(d[chosenXAxis]))
-    .attr('cy', d => yLinearScale(d[chosenYAxis]))
-    .attr('r', 10)
-    .attr('fill', 'blue')
-    .attr('opacity', '0.5');
+        .data(health_data)
+        .enter()
+        .append('circle')
+        .attr('cx', d => xLinearScale(d[chosenXAxis])+5)
+        .attr('cy', d => yLinearScale(d[chosenYAxis])-5)
+        .attr('r', 15)
+        .attr('fill', 'blue')
+        .attr('opacity', '0.5');
 
+    var textLabels = chartGroup.selectAll('.text-label')
+        .data(health_data)
+        .enter()
+        .append('text')
+        .attr('class', 'text-label')
+        .attr('dx', d => xLinearScale(d[chosenXAxis]))
+        .attr('dy', d => yLinearScale(d[chosenYAxis]))
+        .text(d=>d.abbr)
 
     var xlabelsGroup = chartGroup.append('g')
         .attr('transform', `translate(${width/2}, ${height + 20})`);
@@ -236,6 +261,7 @@ d3.csv('data.csv').then(function(health_data, err) {
 
                 //update circles with new x values 
                 circlesGroup = renderXCircles(circlesGroup, xLinearScale, chosenXAxis);
+                textLabels = renderXTextLabels(textLabels, xLinearScale, chosenXAxis);
 
                 circlesGroup = updateToolTip(chosenXAxis,chosenYAxis, circlesGroup); 
 
@@ -294,7 +320,7 @@ d3.csv('data.csv').then(function(health_data, err) {
 
                 //update circles with new y values 
                 circlesGroup = renderYCircles(circlesGroup, yLinearScale, chosenYAxis);
-
+                textLabels = renderYTextLabels(textLabels, yLinearScale, chosenYAxis);
                 circlesGroup = updateToolTip(chosenXAxis,chosenYAxis, circlesGroup); 
 
                 if (chosenYAxis === 'obesity') {
