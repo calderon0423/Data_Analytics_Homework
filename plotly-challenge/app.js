@@ -1,6 +1,6 @@
 //read in the data 
 d3.json("samples.json").then((data) => {
-    // console.log(data);
+    console.log(data);
     var selector=d3.select('#selDataset');
     var sampleNames=data.names;
     console.log(sampleNames);
