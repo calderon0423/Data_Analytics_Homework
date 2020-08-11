@@ -11,4 +11,4 @@ An analysis of weather patterns using python, the OpenWeatherMap API, and CityPy
 Note: For this analysis I used the OpenWeatherMap APIs 5 day forecast to ensure that temperatures and other data points were averaged out for all times of day. Ideally historical data would be used, but that data is only available at a cost. Using the historical weather data may be a future improvement.
 
 ## Approach and File Structure
- - The manipulation and visualization is contained in [WeatherPy.ipynb](WeatherPy.ipynb).
+ - The manipulation and visualization is contained in [WeatherPy.ipynb](jupyter_notebooks/WeatherPy.ipynb).
