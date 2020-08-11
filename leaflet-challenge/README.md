@@ -14,4 +14,3 @@ In this project, I have visualized earthquakes occurring globally using a live A
 * https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json
 
 
-#### Images from the final app
