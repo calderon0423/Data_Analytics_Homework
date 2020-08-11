@@ -6,11 +6,11 @@
 
 Behavioral differences were observed between female and male Citi Bike subscribers. 
 
-Although both genders followed a similar pattern in ride start time there were slight differences. The two most popular start times for both male and female subscribers were 5 pm and 6 pm however, 8 am was the third most popular time for male subscribers while 7 pm for women subscribers. One may conclude that women start their days later and end their days later than men. 
+Although both genders followed a similar pattern in ride start time there were slight differences. The two most popular start times for both male and female subscribers were 5 pm and 6 pm however, 8 am was the third most popular time for male subscribers while 7 pm for women subscribers. One may conclude that women start and end their days later than men. 
 
-Both gender's average trip length was longer during the weekend than the weekdays, however average trip length for women was longer than males'every day of the week. This may be due to utilization of the bike program for leisure during the weekend and for work transportation during the weekdays. 
+Both gender's average trip length was longer during the weekend than the weekday. This may be due to utilization of the bike program for leisure during the weekend and for work transportation during the weekdays. Average trip length for women was longer throughout the week. 
 
-In terms of age, majority of male and female subscribers are in their mid 20s to 30s. Most male subscribers are age 30 and 28. The number of Male subscribers decreases after age 30 and has a peak at age 43 and 53. Most Female subscribers are age 31 and 28. Women have a small peak at 36 but not as prominent as men.  
+In terms of age, majority of male and female subscribers are in their mid 20s to mid 30s. Most male subscribers are age 30 and 28. Male subscriber count decreases after age 30. Most female subscribers are age 31 and 28 and subcription decreases after age 31. Women have a small peak at 36 but not as prominent as the two observed in men at age 43 and 53. 
 
 
 ### Behavioral Differences by User Type
