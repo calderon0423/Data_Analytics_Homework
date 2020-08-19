@@ -1,13 +1,11 @@
 # UFO Sightings
-An interactive visualization and table of self-reported UFO settings.
 [Visit Deployed Page](https://faznaimov.github.io/Aliens/ "UFO Sightings")
 
-## Functionality
-All data is dynamically loaded into a table via Javascript and D3. The table is paginated to 50 results, with filters for City, State/Province, Country, Shape of Object, and Date.
+## Summary
+- Used a Deep Learning classification model to train a dataset and predict whether a wine is red or white based on 11 user-selected physicochemical properties and complement Naive Bayes method to predict the ideal wine based on user-selected adjectives to describe the wine's taste and feel.
+- Created a dynamic word cloud using AnyChart JavaScript library based on wine description word frequency.
+- Created Flask application and deployed via Heroku.com 
 
-A visualization of UFO sightings by US State populates a Leaflet map and provides a popup with the average number of sightings per year.
-
-## Data
-Data is sourced from reported sighting of UFOs in United States, Canada, Great Britain, and Australia from 2010-2014. All data wass self-reported to the 
-[National UFO Reporting Center (NUFORC)](http://www.nuforc.org/ "National UFO Reporting Center (NUFORC)")
+## Tools Used
+Python, HTML/CSS, JavaScript, Python Flask, MongoDB, D3, Bootstrap, Scikit-learn, Tensorflow, Heroku
 
